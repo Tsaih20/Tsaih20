@@ -1,0 +1,27 @@
+int servopin = 7;
+int pulse = 2000
+;
+  // This is the setup code, only runs once. The pin that the circuit feeds into is #7, so the designated "servopin" is #7.
+void setup() 
+{
+  // 
+pinMode(servopin,OUTPUT);
+Serial.begin(9600);
+}
+  // 9600 is the recommended refresh rate for the code, I think, still have to figure that one out.
+void loop() {
+  // This code modulates the movement of the servo, only in one direction. 
+
+digitalWrite(servopin, HIGH);
+delayMicroseconds(pulse);
+digitalWrite(servopin, LOW);
+delay(200);
+  // The greater the delay, the greater the delay between the movements, pretty self-explanatory.
+digitalWrite(servopin, HIGH);
+delayMicroseconds(pulse);
+digitalWrite(servopin, LOW);
+delay(400);
+
+
+
+}
